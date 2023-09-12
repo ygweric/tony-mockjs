@@ -2,13 +2,14 @@
   "name": "tony-mockjs",
   "title": "tony mockjs",
   "description": "tony-mockjs based on Mockjs, which is stoped maintained at 2019",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "homepage": "https://github.com/ygweric/tony-mockjs",
   "repository": {
     "type": "https",
     "url": "https://github.com/ygweric/tony-mockjs"
   },
   "main": "./dist/mock.js",
+  "types": "index.d.ts",
   "keywords": [
     "mock",
     "mockJSON",
