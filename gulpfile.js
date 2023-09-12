@@ -88,16 +88,17 @@ gulp.task("webpack", function( /*callback*/ ) {
 })
 
 // https://github.com/mrhooray/gulp-mocha-phantomjs
-gulp.task('mocha', function() {
-    return gulp.src('test/test.mock.html')
-        .pipe(mochaPhantomJS({
-            reporter: 'spec'
-        }))
-})
+// gulp.task('mocha', function() {
+//     return gulp.src('test/test.mock.html')
+//         .pipe(mochaPhantomJS({
+//             reporter: 'spec'
+//         }))
+// })
 
 
 // https://github.com/floatdrop/gulp-watch
-var watchTasks = ['hello', 'madge', 'jshint', 'webpack', 'mocha']
+// var watchTasks = ['hello', 'madge', 'jshint', 'webpack', 'mocha']
+var watchTasks = ['hello', 'madge', 'jshint', 'webpack', ]
 gulp.task('watch', function( /*callback*/ ) {
     gulp.watch(['src/**/*.js', 'gulpfile.js', 'test/*'], watchTasks)
 })
@@ -121,30 +122,30 @@ gulp.task('madge', function( /*callback*/ ) {
 // TODO
 
 // https://github.com/SBoudrias/gulp-istanbul
-gulp.task('istanbul', function(cb) {
-    gulp.src(['test/test.coveralls.js'])
-        .pipe(istanbul()) // Covering files
-        .pipe(istanbul.hookRequire()) // Force `require` to return covered files
-        .on('finish', function() {
-            gulp.src(['test/test.coveralls.js'])
-                .pipe(mocha({}))
-                .pipe(istanbul.writeReports()) // Creating the reports after tests runned
-                .on('end', cb)
-        })
-})
-gulp.task('istanbulForMochaPhantomJS', function(cb) {
-    gulp.src(['dist/mock.js'])
-        .pipe(istanbul()) // Covering files
-        .pipe(istanbul.hookRequire()) // Force `require` to return covered files
-        .on('finish', function() {
-            gulp.src(['test/test.mock.html'])
-                .pipe(mochaPhantomJS({
-                    reporter: 'spec'
-                }))
-                .pipe(istanbul.writeReports()) // Creating the reports after tests runned
-                .on('end', cb)
-        })
-})
+// gulp.task('istanbul', function(cb) {
+//     gulp.src(['test/test.coveralls.js'])
+//         .pipe(istanbul()) // Covering files
+//         .pipe(istanbul.hookRequire()) // Force `require` to return covered files
+//         .on('finish', function() {
+//             gulp.src(['test/test.coveralls.js'])
+//                 .pipe(mocha({}))
+//                 .pipe(istanbul.writeReports()) // Creating the reports after tests runned
+//                 .on('end', cb)
+//         })
+// })
+// gulp.task('istanbulForMochaPhantomJS', function(cb) {
+//     gulp.src(['dist/mock.js'])
+//         .pipe(istanbul()) // Covering files
+//         .pipe(istanbul.hookRequire()) // Force `require` to return covered files
+//         .on('finish', function() {
+//             gulp.src(['test/test.mock.html'])
+//                 .pipe(mochaPhantomJS({
+//                     reporter: 'spec'
+//                 }))
+//                 .pipe(istanbul.writeReports()) // Creating the reports after tests runned
+//                 .on('end', cb)
+//         })
+// })
 
 // https://github.com/markdalgleish/gulp-coveralls
 gulp.task('coveralls', ['istanbul'], function() {

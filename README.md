@@ -1,3 +1,22 @@
+# tony-mockjs
+
+# 为啥要fock
+基于 http://mockjs.com, 他已经不维护了
+
+
+# 我们是谁
+我们是广联达的一个前端团队，自研了一套内部的 **Tony-Design** 大屏可视化组件，其中用到了mock，但官方不维护了，于是我们做了一部分维护和修复的工作，回馈给开源社区。
+
+# 我做了什么
+1. **fix: responseType 初始化失败**，官方一直没修复，有很多相关 [issue](https://github.com/nuysoft/Mock/issues?q=is%3Aissue+is%3Aopen+responseType) 
+
+# 编译
+* 安装 `glup`
+* 运行 `glup`, 实时生成 `dist`目录内容
+
+---
+
+
 # Mock.js
 <!-- 模拟请求 & 模拟数据 -->
 [![Build Status](https://travis-ci.org/nuysoft/Mock.svg?branch=refactoring)](https://travis-ci.org/nuysoft/Mock)

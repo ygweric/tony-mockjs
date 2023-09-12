@@ -264,6 +264,9 @@ Util.extend(MockXMLHttpRequest.prototype, {
 
         // 原生 XHR
         if (!this.match) {
+            if (this.responseType) {
+                this.custom.xhr.responseType = this.responseType || '' 
+            }
             this.custom.xhr.send(data)
             return
         }
