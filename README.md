@@ -1,6 +1,6 @@
 # tony-mockjs
 
-# 为啥要fock
+# 为啥要fork
 基于 http://mockjs.com, 他已经不维护了
 
 
