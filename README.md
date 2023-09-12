@@ -11,9 +11,16 @@
 1. **fix: responseType 初始化失败**，官方一直没修复，有很多相关 [issue](https://github.com/nuysoft/Mock/issues?q=is%3Aissue+is%3Aopen+responseType) 
 2. 引入了 **@types/mockjs**
 
+
+# 使用
+`npm i tony-mockjs`
+
 # 编译
 * 安装 `glup`
 * 运行 `glup`, 实时生成 `dist`目录内容
+
+
+
 
 ---
 
